@@ -15,6 +15,6 @@ jobs:
         uses: actions/checkout@master
 
       - name: Start xcodebuild test
-        run: xcodebuild clean test -project githubactionstest.xcodeproj -scheme githubactionstest -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+        run: xcodebuild clean test -project githubtest.xcodeproj -scheme githubtest -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
         env:
            destination: ${{ matrix.destination }}
